@@ -1,114 +1,267 @@
 *,
 html,
 body{
-    margin: 0;
     padding: 0;
-
+    margin: 0;
+    font-family: Poppins;
 }
 
-/* Background START */
-.background{
+/* Latar Parent START */
+.latar-parent{
+    width: 100%;
+    height: 100%;
+    
     background-image: url('../img/background/background.png');
+    background-size: cover;
+    background-position: center;
 
+    background-repeat: none;
 }
-/* Background END */
 
 
-
-    /* Navbar START */
-        nav{
+    /* Latar Child START */
+        .latar-parent .latar-container{
             width: 100%;
+            height: 100%;
+            background-color: #95725c8c;
         }
-
-        nav .container{
-            padding: 10px;
-        }
-
-        nav .container ul{
-            display: flex;
-            justify-content: center;
-        }nav .container .text-background{
-            background-color: rgb(137,98,79);
-        }
-
-        nav .container ul li{
-            list-style-type: none;
-        }
-
-        nav .container ul li a{
-            color: rgb(34, 190, 34);
-            text-decoration: none;
-
-            padding-top: 10px;
-            padding-bottom: 10px;
-            margin: 20px;
-
-            font-family: "Protest Guerrilla";
-        }
-
-        nav .container ul li .judul img{
-            min-width: 100px;
-            max-width: 300px;
-
-            
-        }
-    /* Navbar END */
+    /* Latar Child END */
+/* Latar Parent END */
 
 
 
-
-
-    /* Hero START */
-    .hero{
-        min-width: 100px;
-        /* max-width: 350px; */
-        max-width: 600px;
-        background-color:rgba(137, 98, 79, 0.76);
-
-        font-family: poppins;
-        border-radius: 10px;
-        border-top: 4px dashed rgb(34, 190, 34);
+/* Navbar START */
+    nav{
+        width: 100%;
+        font-family: "Protest Guerrilla";
     }
 
-    .hero .container{
+    nav .container{
         padding: 10px;
     }
 
-    .hero .container h2{
-        color: rgb(34, 190, 34);
-
-        text-align: left;
+    nav .container ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
-    .hero .container .flex{
+    nav .container ul li{
+        list-style-type: none;
+        align-content: center;
+    }
+
+
+    nav .container ul li a{
+        color: white;
+        text-shadow: 2px 0 2px black;
+
+        text-decoration: none;
+
+        padding: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+
+        background-color: #95725c;
+        border-radius: 5px;
+
+        transition: all ease-in 550ms;
+    }
+
+    nav .container ul li a:hover{
+        background-color: #836958;
+
+        transition: all ease-in-out 20ms;
+
+        box-shadow: 0 -2px 1px 1px green;
+    }
+
+        /* Judul */
+            nav .container ul li .judul{
+                background-color: unset;
+                z-index: 1px;
+            }
+            nav .container ul li .judul:hover{
+                background-color: unset;
+
+                box-shadow: unset;
+            }
+
+            nav .container ul li .judul img{
+                min-width: 100px;
+                max-width: 200px;
+            }
+        /* Judul */
+/* Navbar END */
+
+
+
+
+/* Hero START */
+    .hero-parent{
+        width: 100%;
+    }
+    
+    .hero-parent .container{
+        padding: 10px;
+    }
+
+    .hero-parent .container ul{
         display: flex;
         justify-content: center;
 
         flex-wrap: wrap;
     }
 
-    .hero .container .flex ul img{
-        min-width: 100px;
-        max-width: 200px;
+            /* Text Area */
+            .hero-parent .container ul .text-area{
+                min-width: 100px;
+                max-width: 500px;
 
-        min-height: 100px;
-        max-height: 200px;
+                padding: 10px;
+                background-image: url('https://e0.pxfuel.com/wallpapers/1010/712/desktop-wallpaper-minecraft-grass-block-box-dirt-texture-minecraft-minecraft.jpg');
+                background-size: cover;
+                background-position: top;
 
-        object-fit: cover;
-    }
+            }
+
+                .hero-parent .container ul .text-area h2{
+                    color: white;
+                    text-shadow: 2px 0 2px black;
+                }
+
+                .hero-parent .container ul .text-area p{
+                    color: white;
+                }
+
+                    /* social icon */
+                        .hero-parent .container ul .text-area .social{
+                            width: 100%;
+                        }
+                        
+                        .hero-parent .container ul .text-area .social .container{
+                            display: flex;
+                            justify-content: right;
+
+                        }
+
+                        .hero-parent .container ul .text-area .social .container a{
+                            color: green;
+                            margin-right: 20px;
+                            text-shadow: 2px 0 2px black;
+                        }
+                    /* social icon */
+            /* Text Area */
 
 
-        /* TEXT START */
-        .hero .container .flex ul{
-            color: white;
-        }
+        /* Img */
+            .hero-parent .container ul img{
+                min-width: 100px;
+                max-width: 500px;
+
+                min-height: 100px;
+                max-height: 300px;
+
+                object-fit: cover;
+                padding: 10px;
+                background-color: green;
+            }
+        /* Img */
+
+/* Hero END */
+
+
+
+
+/* Child Hero START */
+.hero-child{
+    width: 100%;
+}
+
+.hero-child .container{
+    padding: 10px;
+}
+
+.hero-child .container ul{
+    display: flex;
+    justify-content: center;
+
+
+    flex-wrap: wrap;
+
+}
+
+        /* Card 1 */
+            .hero-child .container ul .card-1{
+                background-color: #836958;
+                /* background-image: url('https://e0.pxfuel.com/wallpapers/1010/712/desktop-wallpaper-minecraft-grass-block-box-dirt-texture-minecraft-minecraft.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-position: center; */
+
+                margin: 20px;
+
+                padding: 10px;
+            }
+
+            .hero-child .container ul .card-1 img{
+                min-width: 100%;
+                max-width: 100%;
+                
+                min-height: 200px;
+                max-height: 300px;
+                
+                object-fit: cover;
+            }
+            
+                /* Text */
+                    .hero-child .container ul .card-1 h3{
+                        color: white;
+                        padding: 10px;
+                    }
+                    
+                    
+                    .hero-child .container ul .card-1 p{
+                        color: white;
+                        min-width: 300px;
+                        max-width: 400px;
+
+                        padding: 15px;
+                    }
+                /* Text */
+
+
+            /* Foot 1 */
+                .hero-child .container ul .card-1 .foot-card1{
+                    display: block;
+
+                    margin-top: 20px;
+                }
+
+                    .hero-child .container ul .card-1 .foot-card1 h4{
+                        color: white;
+                        display: flex;
+                        justify-content: left;
+                    }
+                    
+                        .hero-child .container ul .card-1 .foot-card1 a{
+                            color: white;
+                            text-align: none;
+
+                            display: flex;
+                            justify-content: end;
+                        }
+
+                        
+            /* Foot 1 */
+        /* Card 1 */
         
-        .hero .container .flex ul p{
-            font-size: 13.5px;
-
-            text-align: left;
-        }
-        /* TEXT END */
+        
+        /* Card 2 */
+        /* Card 2 */
 
 
-    /* Hero END */
+        /* Card 3 */
+        /* Card 3 */
+
+/* Child Hero END */
